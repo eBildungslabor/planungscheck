@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>Ideenfindung & Realitätscheck</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">  
+    <style>
+      body { background-color: #ffae63; }
+    </style>
+  </head>
+  <body>
+    <div class="answer">
+        <h2>Deine Herausforderung: Ideenentwicklung!</h2>
+      <p>
+        Um ein OER zu gestalten, brauchst Du zunächst eine Idee! Bei der OERcamp Werkstatt kannst Du Dich dazu zum einen einer Community anschließen und bei ihrem Materialvorhaben mitarbeiten. Schau Dir dazu die <a href="https://www.oercamp.de/werkstatt/community/" target="_blank" id="link">Liste der Communities</a> an und nehme vielleicht auch schon Kontakt auf. Alternativ/ zusätzlich kannst Du auch eine eigene Idee entwickeln. Hier kommen dazu einige Inspirationen:  
+      </p>
+      <strong id="metaphorical"></strong>
+      <p> <button type="button" id="gimme">andere anzeigen</button>
+      </p>
+      <p>
+        Wenn Du eine erste grobe Idee für Dein OER hast, kann es weiter gehen. 
+      </p>
+    </div>
+    <div>
+      <a href="idee.html" id="start-over">weiter</a>
+    </div>
+    
+    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<script>
+
+	function random(array) {
+	  return Math.floor(Math.random() * array.length)
+	}
+
+	function generate() {
+		  // lifted somewhat from https://glitch.com/~spark-chipmunk
+	
+		  // arrays of metaphors- if a single quote, a apostrophe needed, enter as \'
+	 let idee = ['einer weiternutzbaren Sammlung von hilfreichen Online-Quellen zu einem Thema',
+'einer interaktiven Übung zur Festigung eines Lernstoffs',
+'einem Online-Quiz zur Selbstüberprüfung eines gelesenen Textes',
+'einem EdubreakOut zum Weiternutzen',
+'Materialien für eine Mikrofortbildung für Kolleginnen und Kollegen',
+'einem Arbeitsblatt/ eine Übersicht mit den wichtigsten Informationen im Überblick zu einem Thema',
+'einem Screencast mit weiteren Erläuterungen zur Erklärung eines Online-Tools',
+'einer Website mit Inspirationen zum Projektlernen',
+'einer Handreichung für Lernende zu Möglichkeiten der Gestaltung medialer Produkte',
+'einer Zusammenstellung frei nutzbarer Bilder zu einem Themengebiet',
+'der Gestaltung von Sketchnotes/ Grafiken für ein bestimmtes Fach / ein Thema',
+'einem Spiel zum selbst Erkunden für Lernende',
+'einer ersten Podcast-Episode z.B. mit der Einführung in ein Thema',
+'einer Vorlage zum Weiternutzen zur Gestaltung einer Unterrichtseinheit',
+'einer erste Lerneinheit eines Online-Kurses',
+               'Hintergrundinformationen zum Klimawandel',
+               'Materialien zum Deutschlernen als Fremdsprache',
+               'Übungsmaterialien zu einer grammatikalischen Herausforderung',
+               'Aufklärungsmaterialien zur Politischen Bildung',
+               'einer Sammlung von Unterrichtsideen für die Grundschule',
+               'Unterstützungsmaterialien um im Kontext der Digitalisierung erfolgreich zu lernen',
+               'einem Einstiegsprojekt ins Coding oder ins Making',
+               'einer Muster-Vorlage zur Seminargestaltung',
+               'einem Muster-Ablaufplan für ein Webinar zum Weiternutzen',
+               'einer anpassbare und weiternutzbare Elterninformation zum Thema Cybermobbing',
+               'einer Anleitung zur Durchführung von Experimenten',
+               'einer Checkliste zur Veröffentlichung von Forschungsergebnissen',
+               'einem Muster Workshop zur bewussten Mediennutzung',
+'einem Zeitstrahl zur Visualisierung von zeitlichen Ereignissen',
+'einer Anleitung für den Einstieg ins #twitterlehrerzimmer',
+'einer erweiterbaren Ideensammlung für kollaboratives Lernen',
+'einer Website, die verschiedene Kreativitätstechniken zusammenstellt',
+'einer weiternutzbaren Präsentation zu einem Thema',
+'einer Schritt-für-Schritt Anleitung für die Gestaltung eines Screencasts oder eines anderen medialen Produkts',
+               'einem kleinen Tutorial zu einem Thema, in dem Du Dich auskennst'
+               
+]
+  
+  
+
+  let options = [`Was hältst Du von ${idee[random(idee)]}?`,
+                ]
+  
+  
+  let randomWord = Math.floor(Math.random() * options.length)
+
+  	  $('#metaphorical').html(options[randomWord]);
+
+	}
+	
+	$(document).ready(function(){	
+		generate();
+		
+		$( "#gimme" ).click(function() {
+			// do it again
+			generate();
+		});	
+			
+	});//ready
+    </script>
+	
+	
+    
+  </body>
+</html>
